@@ -176,7 +176,7 @@ private static int idContato;
 //            ContatosDAO.ExcluirEndereco(codContato);
 //            ContatosDAO.ExcluirTel(codContato);
 //            ContatosDAO.ExcluirEmail(codContato);           
-        } else {
+        } else { 
             JOptionPane.showMessageDialog(null, "Primeiro selecione um registro.");
         }    
         TabelaCliente("select  * from vw_cliente;");
