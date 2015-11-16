@@ -89,6 +89,7 @@ private static int idContato;
         jBtnEditar = new javax.swing.JButton();
         jBtExcluirCliente = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jBtLembrete = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -106,7 +107,7 @@ private static int idContato;
 
         jButton1.setText("Novo");
 
-        jBtnEditar.setText("Editar");
+        jBtnEditar.setText("Detalhar");
         jBtnEditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBtnEditarActionPerformed(evt);
@@ -122,6 +123,13 @@ private static int idContato;
 
         jButton4.setText("Voltar");
 
+        jBtLembrete.setText("Lembrete");
+        jBtLembrete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtLembreteActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -130,6 +138,9 @@ private static int idContato;
                 .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane1)
+                        .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
                         .addComponent(jButton1)
                         .addGap(77, 77, 77)
                         .addComponent(jBtnEditar)
@@ -137,9 +148,9 @@ private static int idContato;
                         .addComponent(jBtExcluirCliente)
                         .addGap(77, 77, 77)
                         .addComponent(jButton4)
-                        .addGap(0, 242, Short.MAX_VALUE))
-                    .addComponent(jScrollPane1))
-                .addContainerGap())
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 84, Short.MAX_VALUE)
+                        .addComponent(jBtLembrete)
+                        .addGap(79, 79, 79))))
             .addGroup(layout.createSequentialGroup()
                 .addGap(305, 305, 305)
                 .addComponent(jLabel1)
@@ -157,7 +168,8 @@ private static int idContato;
                     .addComponent(jButton1)
                     .addComponent(jBtnEditar)
                     .addComponent(jBtExcluirCliente)
-                    .addComponent(jButton4))
+                    .addComponent(jButton4)
+                    .addComponent(jBtLembrete))
                 .addGap(20, 20, 20))
         );
 
@@ -166,7 +178,7 @@ private static int idContato;
 
     private void jBtExcluirClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtExcluirClienteActionPerformed
 
-        if(jTableListarClientes.getSelectedRow() != -1){
+        if(jTableListarClientes.getSelectedRow() != -1) {
             
             int linha = jTableListarClientes.getSelectedRow();
             cliente.setId(Integer.parseInt(jTableListarClientes.getValueAt(linha, 0).toString()));
@@ -196,9 +208,14 @@ private static int idContato;
         }    
     }//GEN-LAST:event_jBtnEditarActionPerformed
 
+    private void jBtLembreteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtLembreteActionPerformed
+        
+    }//GEN-LAST:event_jBtLembreteActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBtExcluirCliente;
+    private javax.swing.JButton jBtLembrete;
     private javax.swing.JButton jBtnEditar;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton4;

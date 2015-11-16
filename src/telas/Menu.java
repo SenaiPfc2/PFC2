@@ -9,9 +9,8 @@ public class Menu extends javax.swing.JFrame {
     /**
      * Creates new form Menu
      */
-    public Menu() {
-        System.out.println("olá");
-        initComponents();
+    public Menu() {        
+        initComponents();       
     }
 
     /**
